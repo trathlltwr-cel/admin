@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>لوحة تحكم شاو بروست</title>
+<title>لوحة تحكم اسم المطعم</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@500;600;700&family=Cairo:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <style>
@@ -320,7 +320,7 @@ main{flex:1;padding:26px 5% 60px;max-width:1300px;margin:0 auto;width:100%;}
 
 <div id="loginScreen">
   <div class="login-box">
-    <h2>لوحة شاو بروست</h2>
+    <h2>لوحة اسم المطعم</h2>
     <p>أدخل كلمة المرور للدخول للوحة التحكم</p>
     <input type="password" id="passInput" placeholder="••••••" onkeydown="if(event.key==='Enter')tryLogin()">
     <button onclick="tryLogin()">دخول</button>
@@ -337,7 +337,7 @@ main{flex:1;padding:26px 5% 60px;max-width:1300px;margin:0 auto;width:100%;}
         <path d="M38 66h24" stroke="var(--paprika)" stroke-width="7" stroke-linecap="round"/>
         <circle cx="50" cy="30" r="6" fill="var(--mustard)"/>
       </svg>
-      <div><h1>شاو بروست<span>إدارة الطلبات والمنتجات ورموز الطاولات</span></h1></div>
+      <div><h1>اسم المطعم<span>إدارة الطلبات والمنتجات ورموز الطاولات</span></h1></div>
     </div>
     <button class="logout-btn" onclick="openSettings()" style="margin-inline-end:8px;">⚙️ الإعدادات</button>
     <button class="logout-btn" onclick="logout()">خروج</button>
@@ -673,7 +673,7 @@ function requestNotificationPermission(){
 function showOrderNotification(newCount){
   try{
     if(!('Notification' in window) || Notification.permission !== 'granted') return;
-    const n = new Notification('🧾 طلب جديد - شاو بروست', {
+    const n = new Notification('🧾 طلب جديد - اسم المطعم', {
       body: newCount>1 ? `وصل ${newCount} طلبات جديدة` : 'وصل طلب جديد، افتح اللوحة لمراجعته',
       tag: 'shao-broast-order',
       renotify: true
