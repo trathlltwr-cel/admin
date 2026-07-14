@@ -3,27 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>لوحة تحكم اسم المطعم</title>
+<title>لوحة تحكم مذاق+</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@500;600;700&family=Cairo:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <style>
 :root{
   /* ==== لوحة ألوان "كشة الطلبات" - ورقة إيصال دافئة فوق خلفية سوداء دخانية ==== */
-  --bg:#15110d; --panel:#1f1810; --panel-alt:#291f14;
-  --paper:#f4e8cd; --paper-dim:#e9d8ae;
+  --bg:#0b0906; --panel:#17120d; --panel-alt:#221a13;
+  --paper:#f2e6c9; --paper-dim:#e6d3a1;
   --ink:#241a10; --ink-soft:#4a3a26;
-  --paprika:#d5451b; --paprika-deep:#9c2f10;
-  --mustard:#eba51e; --mustard-soft:#f3c268;
+  --paprika:#b3382c; --paprika-deep:#7a2019;
+  --mustard:#d4a24c; --mustard-soft:#e8c98a;
   --pickle:#5c8a4d; --pickle-deep:#3d6134;
-  --cream:#f4ead2; --muted:#ad9873;
-  --line:rgba(235,165,30,.18);
+  --cream:#f5efe6; --muted:#b8a99a;
+  --line:rgba(212,162,76,.18);
   --shadow:0 18px 45px rgba(0,0,0,.5);
   --mono:'JetBrains Mono',monospace;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 body{background:var(--bg);color:var(--cream);font-family:'Cairo',sans-serif;min-height:100vh;
-  background-image:radial-gradient(circle at 15% 8%, rgba(235,165,30,.06), transparent 45%),
-                    radial-gradient(circle at 85% 92%, rgba(213,69,27,.07), transparent 45%);
+  background-image:radial-gradient(circle at 15% 8%, rgba(212,162,76,.06), transparent 45%),
+                    radial-gradient(circle at 85% 92%, rgba(179,56,44,.07), transparent 45%);
 }
 .display{font-family:'Lemonada',cursive;}
 button,input,select,textarea{font-family:'Cairo',sans-serif;}
@@ -107,9 +107,9 @@ main{flex:1;padding:26px 5% 60px;max-width:1300px;margin:0 auto;width:100%;}
   padding:9px 16px;border-radius:10px;cursor:pointer;font-size:13.5px;font-weight:700;
   transition:all .25s ease;display:inline-flex;align-items:center;gap:6px;
 }
-.icon-btn:hover{border-color:var(--mustard);background:rgba(235,165,30,.08);}
+.icon-btn:hover{border-color:var(--mustard);background:rgba(212,162,76,.08);}
 .icon-btn.danger{color:#ff9d85;}
-.icon-btn.danger:hover{border-color:var(--paprika);background:rgba(213,69,27,.1);}
+.icon-btn.danger:hover{border-color:var(--paprika);background:rgba(179,56,44,.1);}
 .badge-count{
   background:var(--paprika);color:#fff;border-radius:20px;padding:2px 9px;font-size:12px;font-weight:800;
 }
@@ -150,7 +150,7 @@ main{flex:1;padding:26px 5% 60px;max-width:1300px;margin:0 auto;width:100%;}
   font-size:11.5px;font-weight:800;padding:4px 12px;border-radius:20px;font-family:var(--mono);letter-spacing:.3px;
 }
 .order-type-chip.local{background:rgba(92,138,77,.16);color:var(--pickle-deep);}
-.order-type-chip.delivery{background:rgba(213,69,27,.14);color:var(--paprika-deep);}
+.order-type-chip.delivery{background:rgba(179,56,44,.14);color:var(--paprika-deep);}
 .order-head-right{display:flex;align-items:center;gap:8px;}
 .order-time{color:var(--ink-soft);font-size:11.5px;font-family:var(--mono);}
 .delete-order-btn{
@@ -158,7 +158,7 @@ main{flex:1;padding:26px 5% 60px;max-width:1300px;margin:0 auto;width:100%;}
   width:26px;height:26px;border-radius:7px;cursor:pointer;font-size:13px;line-height:1;
   transition:all .2s ease;flex-shrink:0;
 }
-.delete-order-btn:hover{border-color:var(--paprika);color:var(--paprika);background:rgba(213,69,27,.08);}
+.delete-order-btn:hover{border-color:var(--paprika);color:var(--paprika);background:rgba(179,56,44,.08);}
 .order-card h4{font-size:16.5px;color:var(--ink);margin-bottom:3px;font-weight:800;}
 .order-card .phone{color:var(--ink-soft);font-size:13px;margin-bottom:10px;font-family:var(--mono);}
 .order-meta{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--ink-soft);margin-bottom:10px;}
@@ -179,11 +179,11 @@ main{flex:1;padding:26px 5% 60px;max-width:1300px;margin:0 auto;width:100%;}
 .status-btn.active{background:var(--paprika);color:#fff;border-color:var(--paprika);}
 .status-btn:hover{border-color:var(--paprika);}
 .reject-btn{
-  width:100%;margin-top:8px;padding:9px 8px;border-radius:8px;border:1px solid rgba(213,69,27,.35);
+  width:100%;margin-top:8px;padding:9px 8px;border-radius:8px;border:1px solid rgba(179,56,44,.35);
   background:transparent;color:var(--paprika-deep);font-size:12px;font-weight:800;cursor:pointer;
   transition:all .2s ease;
 }
-.reject-btn:hover{background:rgba(213,69,27,.12);border-color:var(--paprika);}
+.reject-btn:hover{background:rgba(179,56,44,.12);border-color:var(--paprika);}
 .items-toggle{color:var(--paprika-deep);font-size:12.5px;cursor:pointer;margin-top:12px;display:inline-block;font-weight:700;}
 .items-list{display:none;margin-top:10px;border-top:1.5px dashed rgba(36,26,16,.25);padding-top:10px;}
 .items-list.show{display:block;}
@@ -320,7 +320,7 @@ main{flex:1;padding:26px 5% 60px;max-width:1300px;margin:0 auto;width:100%;}
 
 <div id="loginScreen">
   <div class="login-box">
-    <h2>لوحة اسم المطعم</h2>
+    <h2>لوحة مذاق+</h2>
     <p>أدخل كلمة المرور للدخول للوحة التحكم</p>
     <input type="password" id="passInput" placeholder="••••••" onkeydown="if(event.key==='Enter')tryLogin()">
     <button onclick="tryLogin()">دخول</button>
@@ -337,7 +337,7 @@ main{flex:1;padding:26px 5% 60px;max-width:1300px;margin:0 auto;width:100%;}
         <path d="M38 66h24" stroke="var(--paprika)" stroke-width="7" stroke-linecap="round"/>
         <circle cx="50" cy="30" r="6" fill="var(--mustard)"/>
       </svg>
-      <div><h1>اسم المطعم<span>إدارة الطلبات والمنتجات ورموز الطاولات</span></h1></div>
+      <div><h1>مذاق+<span>إدارة الطلبات والمنتجات ورموز الطاولات</span></h1></div>
     </div>
     <button class="logout-btn" onclick="openSettings()" style="margin-inline-end:8px;">⚙️ الإعدادات</button>
     <button class="logout-btn" onclick="logout()">خروج</button>
@@ -673,7 +673,7 @@ function requestNotificationPermission(){
 function showOrderNotification(newCount){
   try{
     if(!('Notification' in window) || Notification.permission !== 'granted') return;
-    const n = new Notification('🧾 طلب جديد - اسم المطعم', {
+    const n = new Notification('🧾 طلب جديد - مذاق+', {
       body: newCount>1 ? `وصل ${newCount} طلبات جديدة` : 'وصل طلب جديد، افتح اللوحة لمراجعته',
       tag: 'shao-broast-order',
       renotify: true
